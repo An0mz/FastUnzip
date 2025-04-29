@@ -58,17 +58,25 @@ namespace ZipAutoExtractor
         {
             string exePath = Assembly.GetExecutingAssembly().Location.Replace("/", "\\");
 
+            if (!File.Exists(exePath))
+            {
+                Console.WriteLine("Could not find executable path.");
+                return;
+            }
+
+            // 1. Associate .zip with FastUnzip
             Registry.SetValue(@"HKEY_CLASSES_ROOT\.zip", "", "FastUnzip.ZipFile");
 
+            // 2. Define the FastUnzip class
             Registry.SetValue(@"HKEY_CLASSES_ROOT\FastUnzip.ZipFile", "", "Zip Archive (FastUnzip)");
 
+            // 3. Set the open command
             string command = $"\"{exePath}\" \"%1\"";
             Registry.SetValue(@"HKEY_CLASSES_ROOT\FastUnzip.ZipFile\shell\open\command", "", command);
 
-            string iconPath = $"{exePath},0";
-            Registry.SetValue(@"HKEY_CLASSES_ROOT\FastUnzip.ZipFile", "DefaultIcon", iconPath);
+            // 4. Set the icon
+            Registry.SetValue(@"HKEY_CLASSES_ROOT\FastUnzip.ZipFile", "DefaultIcon", $"{exePath},0");
         }
-
 
         private static bool IsRunAsAdministrator()
         {

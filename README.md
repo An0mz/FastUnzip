@@ -9,13 +9,24 @@ FastUnzip is a lightweight Windows tool that automatically extracts `.zip` files
 - No dependency on installed .NET Framework (Self-contained).
 
 ## How to Install
-1. Download the latest `FastUnzip.exe` and `InstallFastUnzip.bat` from Releases.
-2. **Right-click** `InstallFastUnzip.bat` ➔ **Run as administrator**.
-3. Done! Now double-clicking `.zip` files will extract them automatically.
+1. Download the latest `FastUnzip-Installer.exe` from Releases.
+2. **Follow Instructions.**
+3. Done! Now double-clicking `.zip` files will extract them automatically. Might need to select the app.
 
 ## How to Build
 - Requires Visual Studio 2022 or later.
 - Open the solution in `src/` and publish with `Self-contained` and `Single File` options.
+
+## File Integrity (SHA256)
+
+If you want to verify the integrity of the installer, here is the SHA256 checksum:
+
+SHA256:B93AEFC4412095BF88E81B2ECB9DAF70656259E68402A105C4AD2C1DD42F455A 
+
+To verify it, open PowerShell and run:
+
+```powershell
+Get-FileHash -Algorithm SHA256 "FastUnzip-Installer.exe"
 
 ---
 
@@ -34,13 +45,24 @@ FastUnzip est un outil léger pour Windows qui extrait automatiquement les fichi
 - Aucune dépendance au framework .NET installé (Autoporté).
 
 ## Comment installer
-1. Téléchargez les derniers fichiers `FastUnzip.exe` et `InstallFastUnzip.bat` depuis la section Releases.
-2. **Clic droit** sur `InstallFastUnzip.bat` ➔ **Exécuter en tant qu'administrateur**.
-3. C'est tout ! Maintenant, un double-clic sur un fichier `.zip` l'extraira automatiquement.
+1. Téléchargez l'installateur `FastUnzip-Installer.exe` depuis la section Releases.
+2. **Suivre les instructions.**
+3. C'est tout ! Maintenant, un double-clic sur un fichier `.zip` l'extraira automatiquement. Juste a sélectionner l'app pour extraire.
 
 ## Comment compiler
 - Nécessite Visual Studio 2022 ou plus récent.
 - Ouvrez la solution dans le dossier `src/` et publiez avec les options **Autoporté** et **Fichier unique**.
+
+## File Integrity (SHA256)
+
+If you want to verify the integrity of the installer, here is the SHA256 checksum:
+
+SHA256:B93AEFC4412095BF88E81B2ECB9DAF70656259E68402A105C4AD2C1DD42F455A 
+
+To verify it, open PowerShell and run:
+
+```powershell
+Get-FileHash -Algorithm SHA256 "FastUnzip-Installer.exe"
 
 ---
 
