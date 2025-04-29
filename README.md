@@ -20,3 +20,28 @@ FastUnzip is a lightweight Windows tool that automatically extracts `.zip` files
 ---
 
 Made with ❤️ by Anomz
+
+---
+
+# 🇫🇷 FastUnzip
+
+FastUnzip est un outil léger pour Windows qui extrait automatiquement les fichiers `.zip` lorsque vous double-cliquez dessus, comme sur macOS.
+
+## Fonctionnalités
+- Double-cliquez sur un fichier `.zip` ➔ Extraction automatique dans un dossier.
+- Pas d'interface utilisateur, fonctionnement silencieux.
+- Application légère en un seul `.exe` (~66Ko).
+- Aucune dépendance au framework .NET installé (Autoporté).
+
+## Comment installer
+1. Téléchargez les derniers fichiers `FastUnzip.exe` et `InstallFastUnzip.bat` depuis la section Releases.
+2. **Clic droit** sur `InstallFastUnzip.bat` ➔ **Exécuter en tant qu'administrateur**.
+3. C'est tout ! Maintenant, un double-clic sur un fichier `.zip` l'extraira automatiquement.
+
+## Comment compiler
+- Nécessite Visual Studio 2022 ou plus récent.
+- Ouvrez la solution dans le dossier `src/` et publiez avec les options **Autoporté** et **Fichier unique**.
+
+---
+
+Fait avec ❤️ par Anomz
