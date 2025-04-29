@@ -5,7 +5,7 @@ FastUnzip is a lightweight Windows tool that automatically extracts `.zip` files
 ## Features
 - Double-click any `.zip` ➔ Extracts automatically into a folder.
 - No UI, silent operation.
-- Lightweight single `.exe` (~40MB).
+- Lightweight single `.exe` (~66Ko).
 - No dependency on installed .NET Framework (Self-contained).
 
 ## How to Install
