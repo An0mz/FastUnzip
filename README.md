@@ -16,7 +16,7 @@ FastUnzip is a lightweight Windows tool that automatically extracts `.zip` files
 
 ## How to Build
 - Requires Visual Studio 2022 or later.
-- Open the solution in `src/` and publish with `Self-contained` and `Single File` options.
+- Open the solution using the `.sln` and publish with `Self-contained` and `Single File` options.
 
 ## File Integrity (SHA256)
 
