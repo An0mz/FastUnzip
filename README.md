@@ -56,7 +56,7 @@ FastUnzip est un outil léger pour Windows qui extrait automatiquement les fichi
 
 ## Comment compiler
 - Nécessite Visual Studio 2022 ou plus récent.
-- Ouvrez la solution dans le dossier `src/` et publiez avec les options **Autoporté** et **Fichier unique**.
+- Ouvrez la solution à l'aide du `.sln` et publiez avec les options **Automatique** et **Fichier unique**.
 
 ## Intégrité du fichier (SHA256)
 
