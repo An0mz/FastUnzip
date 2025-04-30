@@ -5,12 +5,12 @@ FastUnzip is a lightweight Windows tool that automatically extracts `.zip` files
 ## Features
 - Double-click any `.zip` ➔ Extracts automatically into a folder.
 - No UI, silent operation.
-- Lightweight single `.exe` (~66Ko).
+- Lightweight single `.exe`.
 - No dependency on installed .NET Framework (Self-contained).
 
 ## How to Install
 1. Download the latest `FastUnzip-Installer.exe` from the [Releases](../../releases) section.
-2. **Right-click and run as administrator**.
+2. **Launch the installer**.
 3. Done! Now double-clicking `.zip` files will extract them automatically.  
    *(If nothing happens, right-click a `.zip` ➔ "Open with" ➔ choose FastUnzip.)*
 
@@ -45,12 +45,12 @@ FastUnzip est un outil léger pour Windows qui extrait automatiquement les fichi
 ## Fonctionnalités
 - Double-cliquez sur un fichier `.zip` ➔ Extraction automatique dans un dossier.
 - Pas d'interface utilisateur, fonctionnement silencieux.
-- Application légère en un seul `.exe` (~66Ko).
+- Application légère en un seul `.exe`.
 - Aucune dépendance au framework .NET installé (Autoporté).
 
 ## Comment installer
 1. Téléchargez le fichier `FastUnzip-Installer.exe` depuis la section [Releases](../../releases).
-2. **Faites un clic droit dessus et choisissez "Exécuter en tant qu'administrateur"**.
+2. **Lancer l'installateur"**.
 3. C’est tout ! Un double-clic sur un fichier `.zip` l’extraira automatiquement.  
    *(Si cela ne fonctionne pas, faites un clic droit sur le `.zip` ➔ "Ouvrir avec" ➔ choisissez FastUnzip.)*
 
