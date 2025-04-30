@@ -23,7 +23,7 @@ FastUnzip is a lightweight Windows tool that automatically extracts `.zip` files
 To verify the integrity of the installer, here is the SHA256 checksum:
 
 ```
-B93AEFC4412095BF88E81B2ECB9DAF70656259E68402A105C4AD2C1DD42F455A
+06D374A6ADDE0DBD888838DA6C9FC865A1B046154B2312FCEABD361E2AE0CE26
 ```
 
 To verify it using PowerShell:
@@ -63,7 +63,7 @@ FastUnzip est un outil léger pour Windows qui extrait automatiquement les fichi
 Voici le hachage SHA256 de l’installateur, pour vérifier son intégrité :
 
 ```
-B93AEFC4412095BF88E81B2ECB9DAF70656259E68402A105C4AD2C1DD42F455A
+06D374A6ADDE0DBD888838DA6C9FC865A1B046154B2312FCEABD361E2AE0CE26
 ```
 
 Pour le vérifier via PowerShell :
