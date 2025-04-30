@@ -56,27 +56,30 @@ namespace ZipAutoExtractor
 
         private static void InstallRegistryKeys()
         {
-            string exePath = Assembly.GetExecutingAssembly().Location.Replace("/", "\\");
+            string exePath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName.Replace("/", "\\");
 
-            if (!File.Exists(exePath))
+            try
             {
-                Console.WriteLine("Could not find executable path.");
-                return;
+                using (RegistryKey root = RegistryKey.OpenBaseKey(RegistryHive.ClassesRoot, RegistryView.Registry64))
+                {
+                    root.CreateSubKey(@".zip")?.SetValue("", "FastUnzip.ZipFile");
+
+                    var typeKey = root.CreateSubKey(@"FastUnzip.ZipFile");
+                    typeKey?.SetValue("", "Zip Archive (FastUnzip)");
+                    typeKey?.SetValue("DefaultIcon", $"{exePath},0");
+
+                    root.CreateSubKey(@"FastUnzip.ZipFile\shell\open\command")
+                        ?.SetValue("", $"\"{exePath}\" \"%1\"");
+                }
+
+                Console.WriteLine("Registry keys written successfully.");
             }
-
-            // 1. Associate .zip with FastUnzip
-            Registry.SetValue(@"HKEY_CLASSES_ROOT\.zip", "", "FastUnzip.ZipFile");
-
-            // 2. Define the FastUnzip class
-            Registry.SetValue(@"HKEY_CLASSES_ROOT\FastUnzip.ZipFile", "", "Zip Archive (FastUnzip)");
-
-            // 3. Set the open command
-            string command = $"\"{exePath}\" \"%1\"";
-            Registry.SetValue(@"HKEY_CLASSES_ROOT\FastUnzip.ZipFile\shell\open\command", "", command);
-
-            // 4. Set the icon
-            Registry.SetValue(@"HKEY_CLASSES_ROOT\FastUnzip.ZipFile", "DefaultIcon", $"{exePath},0");
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error writing registry: " + ex.Message);
+            }
         }
+
 
         private static bool IsRunAsAdministrator()
         {
